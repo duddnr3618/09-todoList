@@ -1,0 +1,9 @@
+
+/* .TodoEditor {border: 1px solid gray;} */
+.TodoEditor .editor_wrapper {width: 100%; display: flex; gap: 10px;}
+.TodoEditor input {flex: 1; box-sizing: border-box; border: 1px solid rgb(220,200,200);
+border-radius: 7px; padding: 10px;}
+/* 인풋에 마우스를 포커스 했을시 */
+.TodoEditor input:focus {outline: none; border: 1px solid #1f93ff;}
+.TodoEditor button {cursor: pointer; width: 80px; border: none; background-color: #1f93ff;
+color: white; border-radius: 9px;}
