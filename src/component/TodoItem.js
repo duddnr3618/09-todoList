@@ -1,30 +1,28 @@
-import './TodoItem.css';
+import './TodoItem.css'; 
 
-const TodoItem = ({id , content , isDone , createDate , onUpDate , onDelete}) => {
+const TodoItem = ({id , content, isDone, createDate, onUpdate, onDelete}) => {
 
-    //onChageCheckbox 함수 
-    const onChangeCheckbox = () => {
-        onUpDate(id);
+    //onChangeCheckbox 함수 
+    const onChangeCheckbox  = () =>  {
+        onUpdate (id); 
     }
-
     const onClickDelete = () => {
-        onDelete(id);
+        onDelete(id); 
     }
 
     return (
-        <div className = "TodoItem">
-            <div className="checkbox_col">
-                <input type="checkbox" onChange={onChangeCheckbox} checked = {isDone} />
+        <div className ="TodoItem">
+            <div className ="checkbox_col">
+                <input type="checkbox" onChange={onChangeCheckbox} checked = {isDone} /> 
             </div>
-
-            <div className="title_col"> {content} </div>
-            <div className="date_col"> {new Date (createDate).toLocaleDateString()} </div>
-            <div className="btn_col">
-                <button onClick={onClickDelete}>삭제</button>
+            <div className="title_col"> { content }</div>
+            <div className="date_col"> { new Date(createDate).toLocaleDateString()} </div>
+            {/* <div className="date_col"> { createDate } </div> */}
+            <div className="btn_col"> 
+                <button onClick = {onClickDelete} > 삭제 </button>
             </div>
-
+            
         </div>
-    );
+    ); 
 }
-
-export default TodoItem;
+export default TodoItem; 
